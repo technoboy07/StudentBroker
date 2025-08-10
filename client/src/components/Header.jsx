@@ -32,8 +32,8 @@ const Header = () => {
       <div className="flex justify-between items-center max-w-6xl mx-auto p-3">
         <Link to={"/"}>
           <h1 className="font-bold text-sm sm:text-xl flex flex-wrap">
-            <span className="text-blue-500">Alpha97</span>
-            <span className="text-blue-700">Estate</span>
+            <span className="text-blue-500">Student</span>
+            <span className="text-blue-700">Broker</span>
           </h1>
         </Link>
         <form
