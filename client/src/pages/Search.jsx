@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import ListingItem from "../components/ListingItem";
 
 const Search = () => {
@@ -231,13 +231,18 @@ const Search = () => {
           <button className="bg-blue-700 text-white p-3 rounded-lg uppercase hover:opacity-95">
             Search
           </button>
+           <Link to={"/create-listing"} className="w-full">
+            <button className="bg-green-700 text-white p-3 rounded-lg uppercase hover:opacity-95 w-full">
+              Create a Listing
+            </button>
+          </Link>
         </form>
       </div>
       <div className="flex-1">
         <h1 className="text-3xl font-semibold border-b p-3 text-slate-700 mt-5">
           Listing Results:
         </h1>
-        <div className="p-7 flex flex-wrap gap-4">
+        <div className="p-7 flex flex-col sm:flex-row flex-wrap gap-4">
           {!loading && listings.length === 0 && (
             <p className="text-xl text-slate-700">No listing found!</p>
           )}
